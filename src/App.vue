@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav class="nav fixed">
+      <h2>{{name="Claudio de Oliveira Almeida Junior"}}</h2>
+    </nav>
+    <Personal name="Claudio de Oliveira Almeida Junior" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Personal from "./components/Personal.vue";
+import Project from "./components/Project.vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Personal,
+    Project
   }
-}
+};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.fixed {
+  display: fixed;
+  margin: 10px;
+  box-shadow: 5px 5px 20px rgb(39, 38, 38);
 }
 </style>
