@@ -3,14 +3,21 @@
     <nav class="nav fixed">
       <h2>{{name="Claudio de Oliveira Almeida Junior"}}</h2>
     </nav>
+
     <Personal name="Claudio de Oliveira Almeida Junior" />
+    <Project />
+    <div class="side-btn">
+      <div>
+        <i></i>
+      </div>
+      <div></div>
+    </div>
   </div>
 </template>
 
 <script>
 import Personal from "./components/Personal.vue";
 import Project from "./components/Project.vue";
-import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "app",
@@ -32,6 +39,7 @@ export default {
 }
 
 .fixed {
+  overflow: scroll;
   display: fixed;
   margin: 10px;
   box-shadow: 5px 5px 20px rgb(39, 38, 38);
