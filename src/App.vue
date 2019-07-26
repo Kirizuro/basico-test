@@ -1,47 +1,69 @@
 <template>
-  <div id="app">
-    <nav class="nav fixed">
-      <h2>{{name="Claudio de Oliveira Almeida Junior"}}</h2>
-    </nav>
-
-    <Personal name="Claudio de Oliveira Almeida Junior" />
-    <Project />
-    <div class="side-btn">
-      <div>
-        <i></i>
-      </div>
-      <div></div>
-    </div>
-  </div>
+  <v-app>
+    <v-app-bar app>
+      <v-img
+        src="../src/assets/Me.jpg"
+        class="rounded"
+        aspect-ratio="1"
+        max-width="50"
+        max-height="50"
+      ></v-img>
+      <v-spacer></v-spacer>
+      <v-toolbar-title class="headline text-uppercase">
+        <span class="font-weight-light">Claudio de Oliveira Almeida Junior</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <a class="font" href="https://github.com/Kirizuro" target="_blanked">
+        <font-awesome-icon :icon="['fab', 'github']" size="2x" />
+      </a>
+      <a
+        class="font"
+        href="https://www.linkedin.com/in/claudio-de-oliveira-almeida-junior-3a6a75136/"
+        target="_blanked"
+      >
+        <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" />
+      </a>
+    </v-app-bar>
+    <v-content>
+      <Personal />
+    </v-content>
+    <v-content>
+      <Project />
+    </v-content>
+    <v-content>
+      <Side />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import Personal from "./components/Personal.vue";
-import Project from "./components/Project.vue";
+//import HelloWorld from "./components/HelloWorld";
+import Personal from "./components/Personal";
+import Project from "./components/Project";
+import Side from "./components/Side";
 
 export default {
-  name: "app",
+  name: "App",
   components: {
+    //HelloWorld,
     Personal,
-    Project
-  }
+    Project,
+    Side
+  },
+  data: () => ({
+    //
+  })
 };
 </script>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.font {
+  margin: 3px;
+  text-decoration: none;
+  color: #000;
 }
-
-.fixed {
-  overflow: scroll;
-  display: fixed;
-  margin: 10px;
-  box-shadow: 5px 5px 20px rgb(39, 38, 38);
+.rounded {
+  border-radius: 50%;
 }
 </style>
+
