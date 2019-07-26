@@ -1,22 +1,18 @@
 <template>
-  <v-container class="side-btn">
-    <v-item-group mandatory>
-      <v-item v-slot:default="{active, toggle}">
-        <v-card :color="active? 'primary' : ''" @click="toggle">
-          <v-scroll-y-transition>
-            <div v-if="active"></div>
-            <v-flex xs2 md2>
-              <v-btn color="primary">
-                <font-awesome-icon icon="user" class="icon" />
-              </v-btn>
-              <v-btn color="secondary">
-                <font-awesome-icon icon="briefcase" class="icon" />
-              </v-btn>
-            </v-flex>
-          </v-scroll-y-transition>
-        </v-card>
-      </v-item>
-    </v-item-group>
+  <v-container>
+    <v-flex xs12 text-center>
+      <v-btn color="primary" x-large max-width12>
+        <font-awesome-icon icon="user" class="icon" />Pessoal
+      </v-btn>
+      <v-btn color="secondary" x-large>
+        <font-awesome-icon icon="briefcase" class="icon" />Projeto
+      </v-btn>
+      <v-tabs>
+        <v-tab>
+          <font-awesome-icon icon="user" class="icon" size="3x" />Pessoal
+        </v-tab>
+      </v-tabs>
+    </v-flex>
   </v-container>
 </template>
 
@@ -60,7 +56,7 @@ export default {
 }
 
 .icon {
-  color: #fff;
+  color: #000;
 }
 
 #mySidenav a:hover {

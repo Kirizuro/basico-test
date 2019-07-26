@@ -1,13 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-img
-        src="../src/assets/Me.jpg"
-        class="rounded"
-        aspect-ratio="1"
-        max-width="50"
-        max-height="50"
-      ></v-img>
+      <v-img src="../src/assets/Me.jpg" class="rounded" max-width="50" max-height="50"></v-img>
       <v-spacer></v-spacer>
       <v-toolbar-title class="headline text-uppercase">
         <span class="font-weight-light">Claudio de Oliveira Almeida Junior</span>
@@ -24,20 +18,22 @@
         <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" />
       </a>
     </v-app-bar>
+
+    <v-content>
+      <Side />
+    </v-content>
+
     <v-content>
       <Personal />
     </v-content>
+
     <v-content>
       <Project />
-    </v-content>
-    <v-content>
-      <Side />
     </v-content>
   </v-app>
 </template>
 
 <script>
-//import HelloWorld from "./components/HelloWorld";
 import Personal from "./components/Personal";
 import Project from "./components/Project";
 import Side from "./components/Side";
@@ -45,7 +41,6 @@ import Side from "./components/Side";
 export default {
   name: "App",
   components: {
-    //HelloWorld,
     Personal,
     Project,
     Side
