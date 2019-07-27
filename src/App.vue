@@ -18,11 +18,6 @@
         <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" />
       </a>
     </v-app-bar>
-
-    <v-content>
-      <Side />
-    </v-content>
-
     <v-content>
       <Personal />
     </v-content>
@@ -36,18 +31,14 @@
 <script>
 import Personal from "./components/Personal";
 import Project from "./components/Project";
-import Side from "./components/Side";
 
 export default {
   name: "App",
   components: {
     Personal,
-    Project,
-    Side
+    Project
   },
-  data: () => ({
-    //
-  })
+  data: () => ({})
 };
 </script>
 

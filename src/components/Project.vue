@@ -5,8 +5,8 @@
         <h1 class="text-uppercase font-weight-light ma-7">Projeto que mais me orgulho</h1>
         <p>
           O projeto com que mais gostei de ter trabalhado tinha como objetivo a contratação de seguros seja pessoal
-          ou profissional, a stack consistia de Bootsrap para o Front e PHP + MySQL no Back, esse projeto tem uma área
-          para edição que permitia que o dono poderia adicionar, remover ou alterar qualquer um dos seguros assim como
+          ou profissional, a stack consistia de Bootstrap para o Front e PHP + MySQL no Back, esse projeto tem uma área
+          para edição que permite o dono adicionar, remover ou alterar qualquer um dos seguros assim como
           suas categorias e também possui um blog integrado.
         </p>
       </v-flex>
@@ -19,6 +19,3 @@ export default {
   name: "Project"
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
