@@ -18,25 +18,18 @@
         <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" />
       </a>
     </v-app-bar>
-    <v-content>
-      <Personal />
-    </v-content>
-
-    <v-content>
-      <Project />
-    </v-content>
+    <Action />
+    <router-view />
   </v-app>
 </template>
 
 <script>
-import Personal from "./components/Personal";
-import Project from "./components/Project";
+import Action from "./actions/Actions";
 
 export default {
   name: "App",
   components: {
-    Personal,
-    Project
+    Action
   },
   data: () => ({})
 };
